@@ -1,0 +1,19 @@
+import java.util.Scanner;
+// Other imports go here
+// Do NOT change the class name
+class Main{
+    public static void main(String[] args)
+    {
+        // Write your code here
+      Scanner n=new Scanner(System.in);
+      int a=n.nextInt();
+      int sum=0;
+      int rem=0;
+      while(a>0){
+        rem=a%10;
+        a=a/10;
+        sum=sum*10+rem;
+      }
+      System.out.println(sum);
+    }
+}
