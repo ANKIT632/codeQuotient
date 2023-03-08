@@ -1,0 +1,32 @@
+import java.util.Scanner;
+// Other imports go here
+// Do NOT change the class name
+class Main{
+    public static void main(String[] args)
+    {
+        // Write your code here
+      Scanner n=new Scanner(System.in);
+      int a=n.nextInt();
+      int b=n.nextInt();
+      char s=n.next().charAt(0);
+      if(s=='+'){
+        System.out.println(a+b);
+      }
+      else if(s=='-'){
+        System.out.println(a-b);
+      }
+      else if(s=='/'){
+        System.out.println(a/b);
+      }
+      else if(s=='%'){
+        System.out.println(a%b);
+      }
+      else if(s=='*'){
+        System.out.println(a*b);
+      }
+      else{
+        System.out.println("Enter valid arithmetic operator");
+      }
+     n.close(); 
+    }
+}
