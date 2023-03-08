@@ -1,0 +1,35 @@
+import java.util.Scanner;
+// Other imports go here
+// Do NOT change the class name
+class Main{
+    public static void main(String[] args)
+    {
+        // Write your code here
+      Scanner n=new Scanner(System.in);
+      double ga=n.nextDouble();
+      double dis=0.0;
+      double addDis=0.0;
+      if(ga<1000){
+        dis=0.0;
+      }
+      else if(ga>=1001 && ga <=5000){
+        dis=0.05;
+      }
+      else if(ga>=5001 && ga <=10000){
+        dis=0.1;
+      }
+      
+      else if(ga>10000){
+        dis=0.15;
+      }
+      if(ga>30000){
+        addDis=0.02;
+      }
+      
+      double netAm=ga-(ga*dis)-(ga*addDis);
+    
+    System.out.printf("%.2f", netAm);
+      
+      n.close();
+    }
+}
