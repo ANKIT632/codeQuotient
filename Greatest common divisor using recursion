@@ -1,0 +1,25 @@
+class Main
+{
+  public static void main(String[] args)
+  {
+    int t, a, b;
+    Scanner s=new Scanner(System.in);
+    t=s.nextInt();
+    while(t != 0)
+    {
+      a=s.nextInt();
+      b=s.nextInt();
+      System.out.println(Result.gcd(a, b));
+      t--;
+    }
+  }
+
+  static int gcd(int i, int j)
+  {
+      if(j==0)
+        return i;
+    else
+  return gcd(j,i%j);
+  }
+  
+  }
