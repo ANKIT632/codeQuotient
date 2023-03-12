@@ -1,0 +1,33 @@
+import java.util.Scanner;
+// Other imports go here
+// Do NOT change the class name
+class Main{
+    public static void main(String[] args)
+    {
+        // Write your code here
+      Scanner n=new Scanner(System.in);
+      int s=n.nextInt();
+      int arr[]=new int[s];
+       boolean b=false;
+      for(int i=0;i<s;i++){
+        arr[i]=n.nextInt();
+      }
+      int max=arr[0];
+      int smax=Integer.MIN_VALUE;
+      for(int i=1;i<s;i++){
+        if(max<arr[i]){
+          b=true;
+          smax=max;
+          max=arr[i];         
+        }
+        else if(arr[i]!=max && smax<arr[i]){
+          b=true;
+          smax=arr[i]; 
+        }   
+      }
+      if(b)
+      System.out.println(smax);
+      else
+        System.out.println(0);
+    }
+}
