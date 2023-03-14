@@ -1,0 +1,41 @@
+import java.util.Scanner;
+// Other imports go here
+// Do NOT change the class name
+class Main{
+    public static void main(String[] args)
+    {
+        // Write your code here
+      Scanner m=new Scanner(System.in);
+      int t=m.nextInt(); //test case
+      while(t-->0){
+        int n=m.nextInt();  //array length
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+         arr[i]=m.nextInt();
+        }
+        int pos=m.nextInt();
+        pos=pos%n;
+        rev(arr,0,pos-1);
+        rev(arr,pos,n-1);
+        rev(arr,0,n-1);
+        //print
+        for(int i=0;i<n;i++){
+          System.out.print(arr[i]);
+          if(i<n-1){
+            System.out.print(" ");
+          }
+        }
+        System.out.println();
+      }
+    }
+  //reverse
+    static void rev(int [] arr,int start ,int end){
+      while(start<end){
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+        start++;
+        end--;
+      }
+    }
+}
