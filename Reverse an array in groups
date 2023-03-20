@@ -1,0 +1,23 @@
+class Result {
+  static int[] reverseSubarray(int a[], int n, int k) {
+    // Write your code here
+    if(k==1)
+      return a;
+    for(int i=0;i<n;i=i+k){
+      int l=i;
+      int r=Math.min(l+k-1,n-1);
+      reverse(a,l,r);
+    }
+    return a;
+  }
+ static void reverse(int arr[],int l,int r)
+ {
+   while(l<r){
+     int temp=arr[l];
+     arr[l]=arr[r];
+     arr[r]=temp;
+     l++;
+     r--;
+   }
+ }
+}
